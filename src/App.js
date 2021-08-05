@@ -1,12 +1,10 @@
 import React from "react";
-import web3 from "./web3";
 import lottery from "./lottery";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { manager: "" };
-  }
+  state = {
+    manager: ''
+  };
 
   async componentDidMount() {
     const manager = await lottery.methods.manager().call();
